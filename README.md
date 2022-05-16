@@ -12,7 +12,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot](https://raw.githubusercontent.com/thevipinmishra/frontendmentor-intro-section-dropdown/main/screenshot.png)
 
 ### Links
 
