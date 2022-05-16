@@ -1,14 +1,18 @@
 {
+  "homepage": "https://thevipinmishra.github.io/frontendmentor-intro-section-dropdown",
   "name": "intro-section-with-dropdown",
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@fontsource/epilogue": "^4.5.8",
+    "gh-pages": "^4.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "sass": "^1.51.0",
