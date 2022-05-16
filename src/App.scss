@@ -1,0 +1,111 @@
+// Reset
+html {
+  font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+//  Style guide
+:root {
+  // - Almost White: hsl(0, 0%, 98%)
+  // - Medium Gray: hsl(0, 0%, 41%)
+  // - Almost Black: hsl(0, 0%, 8%)
+  --light-gray: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --dark-gray: hsl(0, 0%, 8%);
+  --font: "Epilogue", sans-serif;
+  --container-gutter: 1.1125rem;
+}
+
+// Media Query Mixin
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@mixin media($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+// Button Reset Mixin 
+@mixin button-reset {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+// Container
+.container {
+  width: 100%;
+  padding-inline: var(--container-gutter);
+  margin-inline: auto;
+
+  @include media(sm) {
+    max-width: 540px;
+  }
+
+  @include media(md) {
+    max-width: 720px;
+  }
+
+  @include media(lg) {
+    max-width: 960px;
+  }
+
+  @include media(xl) {
+    max-width: 1140px;
+  }
+
+  @include media(xxl) {
+    max-width: 1320px;
+  }
+}
+
+.container-fluid {
+    @extend .container;
+    padding-inline: 3rem;
+    max-width: none;
+}
+
+body {
+  font-size: 1rem;
+  font-family: var(--font);
+  font-weight: 500;
+  line-height: 1.55;
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}

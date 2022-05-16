@@ -1,0 +1,80 @@
+@use "../../App.scss" as *;
+
+.site-nav-desktop {
+  padding-block: 1rem;
+  .site-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .site-nav-content {
+      display: flex;
+      align-items: center;
+
+      .site-nav-menu {
+        display: flex;
+        margin-inline-start: 3rem;
+        gap: 2rem;
+
+        li {
+          position: relative;
+        }
+
+        button {
+          @include button-reset;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.8rem;
+          color: var(--medium-gray);
+          transition: color 100ms ease;
+
+          &:hover {
+            color: var(--dark-gray);
+          }
+        }
+
+        .submenu {
+          position: absolute;
+          width: auto;
+          min-width: 140px;
+          right: 0;
+          top: calc(100% + .75rem);
+          padding: 1rem;
+          background-color: #fff;
+          border-radius: .75rem;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+      }
+    }
+
+    .site-nav-actions {
+      .actions-list {
+        display: flex;
+        gap: 0.75rem;
+        button {
+          @include button-reset;
+          display: inline-flex;
+          padding: 0.4rem 1.25rem;
+          font-size: 0.8rem;
+          color: var(--medium-gray);
+          transition: color 100ms ease;
+          border: 1px solid transparent;
+          border-radius: 1rem;
+
+          &.register {
+            border-color: var(--medium-gray);
+          }
+
+          &:hover {
+            color: var(--dark-gray);
+
+            &.register {
+              border-color: var(--dark-gray);
+            }
+          }
+        }
+      }
+    }
+  }
+}

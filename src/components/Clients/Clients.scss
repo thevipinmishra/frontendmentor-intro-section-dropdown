@@ -1,0 +1,23 @@
+@use '../../App.scss' as *;
+
+.clients {
+    padding-block: 2rem;
+
+    .clients-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+
+        img {
+            width: 60px;
+            flex-grow: 0;
+            flex-shrink: 1;
+
+            @include media(lg) {
+                width: 80px;
+            }
+        }
+    }
+}

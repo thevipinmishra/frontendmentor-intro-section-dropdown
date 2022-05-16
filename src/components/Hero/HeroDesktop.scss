@@ -1,0 +1,50 @@
+.hero-section-desktop {
+  padding-block: 4rem;
+
+  .hero-section-desktop-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 7rem;
+
+    .content {
+      display: grid;
+      gap: 2.5rem;
+
+      .section-title {
+        font-size: 4rem;
+        line-height: 1.125;
+        color: var(--dark-gray);
+        font-weight: 700;
+
+        span {
+          display: block;
+        }
+      }
+
+      .section-description {
+        font-size: 1rem;
+        color: var(--medium-gray);
+      }
+
+      .section-cta {
+        display: inline-flex;
+        width: max-content;
+        padding: 1rem 1.5rem;
+        border-radius: 0.75rem;
+        line-height: 0.9;
+        font-weight: 700;
+        background-color: var(--dark-gray);
+        color: #fff;
+        border: 1px solid transparent;
+        transition: 200ms ease;
+
+        &:hover {
+          background-color: #fff;
+          color: var(--dark-gray);
+          border-color: var(--dark-gray);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.hero-section {
+  padding-block: 0.75rem;
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 2rem;
+
+    &-title {
+      font-size: 1.85rem;
+      line-height: 1.12;
+      font-weight: 700;
+    }
+
+    &-description {
+      text-align: center;
+      color: var(--medium-gray);
+      font-size: 0.9rem;
+    }
+
+    &-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.75rem;
+      padding: 0.6rem 1.25rem;
+      font-weight: 500;
+      background-color: var(--dark-gray);
+      color: #fff;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      transition: 200ms ease;
+
+      &:hover {
+        background-color: var(--light-gray);
+        color: var(--dark-gray);
+        border-color: var(--dark-gray);
+      }
+    }
+  }
+}
